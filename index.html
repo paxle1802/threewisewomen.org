@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a365d" />
+
+  <title>Three Wise Women — Empowering Community Through Microgrants & Civic Engagement</title>
+  <meta name="description" content="Three Wise Women is a 501(c)(3) nonprofit in North Stonington, Connecticut, empowering community members through microgrants, civic engagement, and hands-on volunteer programs that reach over 1,000 neighbors each year." />
+  <link rel="canonical" href="https://threewisewomen.org/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Three Wise Women" />
+  <meta property="og:title" content="Three Wise Women — Empowering Community" />
+  <meta property="og:description" content="A Connecticut 501(c)(3) nonprofit providing microgrants, fostering civic engagement, and mobilizing 1,000+ community volunteers." />
+  <meta property="og:url" content="https://threewisewomen.org/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Three Wise Women" />
+  <meta name="twitter:description" content="Empowering community members through microgrants and civic engagement in North Stonington, CT." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Three Wise Women",
+    "url": "https://threewisewomen.org/",
+    "foundingDate": "2025-01-01",
+    "taxID": "99-4791784",
+    "nonprofitStatus": "https://schema.org/Nonprofit501c3",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "359 Norwich Westerly Rd",
+      "addressLocality": "North Stonington",
+      "addressRegion": "CT",
+      "postalCode": "06359",
+      "addressCountry": "US"
+    },
+    "description": "501(c)(3) nonprofit empowering community members through microgrants, civic engagement, and volunteer-driven programs in North Stonington, Connecticut.",
+    "founder": {
+      "@type": "Person",
+      "name": "Sarah Nelson",
+      "jobTitle": "Chief Executive Officer"
+    }
+  }
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      background:#fefcf6;
+      color:#1a202c;
+      line-height:1.65;
+      font-size:17px;
+    }
+    img{max-width:100%;display:block;height:auto}
+    a{color:#1a365d;transition:color .2s}
+    a:hover{color:#c69632}
+
+    /* Design tokens */
+    :root{
+      --navy:#1a365d;
+      --navy-deep:#0f2540;
+      --gold:#c69632;
+      --gold-soft:#d69e2e;
+      --cream:#fefcf6;
+      --cream-warm:#f5efe3;
+      --ink:#1a202c;
+      --muted:#5a6779;
+      --rule:#e2d9c4;
+    }
+
+    /* Typography */
+    .serif{font-family:'Playfair Display',Georgia,serif}
+    h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;margin:0 0 .6em;font-weight:500;color:var(--navy)}
+    h1{font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.01em}
+    h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+    h3{font-size:clamp(1.25rem,2vw,1.55rem)}
+    p{margin:0 0 1em}
+    .eyebrow{
+      font-family:'Inter',sans-serif;
+      font-size:.78rem;font-weight:600;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--gold);margin:0 0 1rem
+    }
+    .lead{font-size:clamp(1.1rem,1.6vw,1.32rem);color:var(--muted);line-height:1.55}
+
+    /* Layout */
+    .container{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+    .narrow{max-width:780px;margin:0 auto;padding:0 1.5rem}
+    section{padding:5rem 0}
+    @media(min-width:768px){section{padding:7rem 0}}
+
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(254,252,246,.92);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--rule);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;max-width:1180px;margin:0 auto}
+    .brand{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600;color:var(--navy);text-decoration:none;letter-spacing:.005em}
+    .brand span{color:var(--gold)}
+    .nav ul{display:none;list-style:none;margin:0;padding:0;gap:2rem}
+    .nav ul a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:500}
+    .nav ul a:hover{color:var(--gold)}
+    @media(min-width:860px){.nav ul{display:flex}}
+    .nav-cta{
+      display:inline-block;padding:.55rem 1.2rem;
+      background:var(--navy);color:#fff;border-radius:2px;
+      text-decoration:none;font-size:.9rem;font-weight:600;
+      transition:background .2s
+    }
+    .nav-cta:hover{background:var(--gold);color:#fff}
+
+    /* Hero */
+    .hero{
+      background:
+        linear-gradient(rgba(15,37,64,.78),rgba(15,37,64,.85)),
+        linear-gradient(135deg,#1a365d 0%,#0f2540 50%,#142d52 100%);
+      color:#fff;
+      padding:7rem 0 6rem;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background-image:
+        radial-gradient(circle at 20% 30%,rgba(198,150,50,.12) 0%,transparent 50%),
+        radial-gradient(circle at 80% 70%,rgba(198,150,50,.08) 0%,transparent 50%);
+    }
+    .hero .container{position:relative}
+    .hero .eyebrow{color:var(--gold-soft)}
+    .hero h1{color:#fff;max-width:18ch;margin-bottom:1.5rem}
+    .hero h1 em{font-style:italic;color:var(--gold-soft);font-weight:400}
+    .hero .lead{color:rgba(255,255,255,.85);max-width:38rem;font-size:clamp(1.15rem,1.7vw,1.4rem)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.5rem}
+
+    .btn{
+      display:inline-block;padding:.85rem 1.8rem;
+      font-size:.95rem;font-weight:600;text-decoration:none;
+      border-radius:2px;transition:all .2s;
+      letter-spacing:.01em;
+    }
+    .btn-primary{background:var(--gold);color:var(--navy-deep)}
+    .btn-primary:hover{background:#e3b250;color:var(--navy-deep);transform:translateY(-1px)}
+    .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+    .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+    /* Stat strip */
+    .stat-strip{
+      background:var(--cream-warm);
+      padding:3rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)
+    }
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2.5rem;text-align:center}
+    .stat-num{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,3.5vw,3rem);color:var(--navy);font-weight:600;line-height:1.1}
+    .stat-label{font-size:.88rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:.5rem;font-weight:500}
+
+    /* Section utilities */
+    .section-alt{background:var(--cream-warm)}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
+    @media(min-width:860px){.grid-2{grid-template-columns:1fr 1fr;gap:5rem}}
+    .grid-3{display:grid;grid-template-columns:1fr;gap:2.5rem}
+    @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+    /* Program cards */
+    .card{
+      background:#fff;border:1px solid var(--rule);
+      padding:2.2rem 1.8rem;border-radius:3px;
+      transition:transform .2s,box-shadow .2s
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 32px -12px rgba(26,54,93,.18)}
+    .card-icon{
+      width:48px;height:48px;border-radius:50%;
+      background:var(--cream-warm);color:var(--gold);
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;
+      margin-bottom:1.2rem
+    }
+    .card h3{font-size:1.32rem;margin-bottom:.7rem;color:var(--navy)}
+    .card p{color:var(--muted);font-size:.97rem;margin:0}
+
+    /* Leadership */
+    .leader-card{
+      background:#fff;border:1px solid var(--rule);
+      padding:2.5rem;border-radius:3px;
+      display:grid;grid-template-columns:1fr;gap:1.5rem;
+    }
+    @media(min-width:680px){.leader-card{grid-template-columns:140px 1fr;align-items:start;gap:2rem}}
+    .avatar{
+      width:120px;height:120px;border-radius:50%;
+      background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+      color:var(--gold-soft);
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:600;
+      margin:0 auto
+    }
+    @media(min-width:680px){.avatar{margin:0}}
+    .leader-name{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin:0 0 .2rem}
+    .leader-title{font-size:.92rem;color:var(--gold);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 1rem}
+
+    /* Foundation info table */
+    .info-table{display:grid;gap:0;margin:2rem 0}
+    .info-row{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--rule);gap:1.5rem;flex-wrap:wrap}
+    .info-row:last-child{border-bottom:none}
+    .info-label{color:var(--muted);font-size:.92rem}
+    .info-value{color:var(--ink);font-weight:500;font-size:.95rem;text-align:right}
+
+    /* CTA section */
+    .cta-band{
+      background:var(--navy);
+      color:#fff;text-align:center;padding:5rem 0
+    }
+    .cta-band h2{color:#fff}
+    .cta-band p{color:rgba(255,255,255,.85);max-width:34rem;margin:0 auto 2rem}
+
+    /* Footer */
+    footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:3rem 0 2rem;font-size:.9rem}
+    footer .container{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+    @media(min-width:768px){footer .container{flex-direction:row;justify-content:space-between;align-items:center}}
+    footer a{color:rgba(255,255,255,.9)}
+    footer a:hover{color:var(--gold-soft)}
+    .footer-meta{font-size:.82rem;color:rgba(255,255,255,.5)}
+
+    /* Decorative rule */
+    .rule-deco{
+      width:60px;height:3px;background:var(--gold);margin-bottom:1.8rem
+    }
+
+    /* Accessibility */
+    .skip-link{
+      position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;
+      padding:.6rem 1rem;z-index:100;text-decoration:none
+    }
+    .skip-link:focus{left:1rem;top:1rem}
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:0!important;transition:none!important}
+      html{scroll-behavior:auto}
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav">
+      <a href="#" class="brand">Three Wise <span>Women</span></a>
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#get-involved" class="nav-cta">Get Involved</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="container">
+        <p class="eyebrow">A Community Foundation · North Stonington, CT</p>
+        <h1 id="hero-h">
+          Neighbors lifting <em>neighbors</em>, one act at a time.
+        </h1>
+        <p class="lead">
+          Three Wise Women is a Connecticut 501(c)(3) nonprofit that turns local goodwill into measurable change — through microgrants, civic engagement, and volunteer programs that reach more than 1,000 people each year.
+        </p>
+        <div class="hero-actions">
+          <a href="#get-involved" class="btn btn-primary">Get Involved</a>
+          <a href="#mission" class="btn btn-ghost">Our Mission</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stat strip -->
+    <section class="stat-strip" aria-label="Impact at a glance">
+      <div class="container">
+        <div class="stats">
+          <div>
+            <div class="stat-num">1,000+</div>
+            <div class="stat-label">Community Volunteers</div>
+          </div>
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Core Programs</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Volunteer-Driven</div>
+          </div>
+          <div>
+            <div class="stat-num">2025</div>
+            <div class="stat-label">Founded</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="mission">
+      <div class="narrow">
+        <p class="eyebrow">Our Mission</p>
+        <div class="rule-deco"></div>
+        <h2>Empowering community members where they live, learn, and lead.</h2>
+        <p class="lead">
+          Three Wise Women empowers community members by providing microgrants, fostering civic engagement, and hosting fundraisers that build local capacity.
+        </p>
+        <p>
+          We were founded on a simple belief: the strongest social safety net is a neighbor who shows up. Every program we run — from springtime Easter basket distributions to year-round volunteer organizing — is designed to remove friction between people who want to help and the families who need help most.
+        </p>
+        <p>
+          We don't position ourselves above the community. We work alongside it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section-alt">
+      <div class="container">
+        <div class="narrow" style="text-align:center;padding:0">
+          <p class="eyebrow">What We Do</p>
+          <div class="rule-deco" style="margin-left:auto;margin-right:auto"></div>
+          <h2>Three programs. One promise: show up for our neighbors.</h2>
+        </div>
+
+        <div class="grid-3" style="margin-top:3.5rem">
+          <article class="card">
+            <div class="card-icon">M</div>
+            <h3>Community Microgrants</h3>
+            <p>Small, fast-turnaround grants for individuals and grassroots groups solving immediate, tangible needs — from a single-parent rent shortfall to a youth-led mural project. Decisions in weeks, not months.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">C</div>
+            <h3>Civic Engagement</h3>
+            <p>Town-hall facilitation, voter registration drives, and community listening sessions that bring residents into local decisions — especially residents who don't usually sit at the table.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">E</div>
+            <h3>Easter Basket Drive &amp; Public Events</h3>
+            <p>Every spring we distribute Easter baskets to children across the region, paired with year-round fundraisers and public events that engage more than 1,000 volunteers across our service area.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section id="impact">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <p class="eyebrow">Impact</p>
+            <div class="rule-deco"></div>
+            <h2>Local trust, measured in turnout.</h2>
+            <p class="lead">
+              Volunteer hours and basket counts aren't vanity metrics — they're how we know the community is showing up <em>for itself</em>.
+            </p>
+          </div>
+          <div>
+            <p>
+              In our first year of programming, more than <strong>1,000 community volunteers</strong> have engaged with Three Wise Women — distributing Easter baskets, staffing public events, organizing micro-fundraisers, and helping evaluate microgrant requests from neighbors.
+            </p>
+            <p>
+              Every dollar we raise stays close to home. Every program we run is owned by the people it serves. We measure success by whether the people in our towns feel less alone — not by our office square footage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section-alt">
+      <div class="narrow">
+        <p class="eyebrow">Leadership</p>
+        <div class="rule-deco"></div>
+        <h2>Meet our founder.</h2>
+
+        <div class="leader-card">
+          <div class="avatar" aria-hidden="true">SN</div>
+          <div>
+            <h3 class="leader-name">Sarah Nelson</h3>
+            <p class="leader-title">Founder &amp; Chief Executive Officer</p>
+            <p>
+              Sarah Nelson founded Three Wise Women in 2025 to formalize years of grassroots community organizing across North Stonington and southeastern Connecticut. A long-time civic volunteer with deep ties to local government and the neighborhood-aid networks of the region, Sarah leads the foundation's microgrant decisions, civic engagement programming, and volunteer coordination.
+            </p>
+            <p style="margin-bottom:0">
+              She holds the principal officer role on the organization's IRS Form 990 filings and serves as the foundation's primary point of contact for partners, donors, and the press.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="get-involved">
+      <div class="narrow">
+        <p class="eyebrow">Get Involved</p>
+        <div class="rule-deco"></div>
+        <h2>There's a place for you here.</h2>
+        <p class="lead">
+          The most effective community foundations are the ones where the helpers and the helped trade places, often. Three ways to plug in:
+        </p>
+
+        <div class="grid-3" style="margin-top:2.5rem">
+          <article class="card">
+            <h3>Volunteer</h3>
+            <p>Join the more than 1,000 neighbors who help organize events, pack Easter baskets, and staff our public programs.</p>
+          </article>
+          <article class="card">
+            <h3>Apply for a Microgrant</h3>
+            <p>Individuals, families, and small civic groups in our service area can request a microgrant for an immediate, tangible community need.</p>
+          </article>
+          <article class="card">
+            <h3>Donate</h3>
+            <p>Every contribution to Three Wise Women is tax-deductible as allowed by law under section 501(c)(3) of the IRS code.</p>
+          </article>
+        </div>
+
+        <p style="text-align:center;margin-top:2.5rem">
+          <a href="#contact" class="btn btn-primary">Contact Us to Begin</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Foundation info -->
+    <section id="foundation" class="section-alt">
+      <div class="narrow">
+        <p class="eyebrow">About the Foundation</p>
+        <div class="rule-deco"></div>
+        <h2>Three Wise Women, Inc.</h2>
+        <p>
+          Three Wise Women is a 501(c)(3) public charity registered with the Internal Revenue Service of the United States. We are headquartered in North Stonington, Connecticut, and we serve residents across southeastern Connecticut.
+        </p>
+
+        <div class="info-table">
+          <div class="info-row">
+            <span class="info-label">Legal status</span>
+            <span class="info-value">501(c)(3) public charity</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">EIN</span>
+            <span class="info-value">99-4791784</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">IRS Pub 78</span>
+            <span class="info-value">Eligible to receive tax-deductible contributions</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">NTEE classification</span>
+            <span class="info-value">S80 — Community Service Clubs</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Year established</span>
+            <span class="info-value">2025</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Principal officer</span>
+            <span class="info-value">Sarah Nelson, CEO</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Headquartered</span>
+            <span class="info-value">North Stonington, Connecticut</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="narrow" style="padding:0">
+        <h2>Strong neighborhoods are built one act at a time.</h2>
+        <p>Whether you'd like to volunteer, apply for a microgrant, or simply learn more about the work, we'd love to hear from you.</p>
+        <a href="#contact" class="btn btn-primary">Reach Out</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="narrow">
+        <p class="eyebrow">Contact</p>
+        <div class="rule-deco"></div>
+        <h2>Get in touch.</h2>
+
+        <address style="font-style:normal;margin:1.5rem 0 0">
+          <p style="margin:0"><strong>Three Wise Women, Inc.</strong></p>
+          <p style="margin:0">359 Norwich Westerly Rd</p>
+          <p style="margin:0">North Stonington, CT 06359</p>
+          <p style="margin:0">United States</p>
+          <p style="margin-top:1rem">
+            Email: <a href="mailto:sarah.nelson@threewisewomen.org">sarah.nelson@threewisewomen.org</a>
+          </p>
+        </address>
+
+        <p style="color:var(--muted);font-size:.95rem;margin-top:2rem">
+          For partnership inquiries, microgrant questions, or volunteer onboarding, please write to the address above. We respond within five business days.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin:0">
+        © 2026 Three Wise Women, Inc. · 501(c)(3) public charity · EIN 99-4791784
+      </p>
+      <p class="footer-meta" style="margin:0">North Stonington, Connecticut</p>
+    </div>
+  </footer>
+
+</body>
+</html>
